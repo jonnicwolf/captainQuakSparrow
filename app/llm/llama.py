@@ -1,7 +1,7 @@
 from llama_cpp import Llama
 
 llm = Llama(
-  model_path="./app/llm/mistral-7b-instruct-v0.1.Q5_K_M.gguf",
+  model_path="./app/llm/models/mistral-7b-instruct-v0.1.Q5_K_M.gguf",
   n_ctx=2048,
   n_threads=8,
 )
