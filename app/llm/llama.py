@@ -10,5 +10,3 @@ def ask(prompt: str) -> str:
     result = llm(prompt, max_tokens=200, stop=["</s>"])
     print(result["choices"][0]["text"].strip())
     return result["choices"][0]["text"].strip()
-
-ask("Say Hello.")
