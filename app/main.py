@@ -3,7 +3,7 @@ import tempfile
 
 from fastapi import APIRouter, File, UploadFile, HTTPException
 from app.stt.whisper import transcribe
-from app.llm.llama import ask
+from app.llm.mcp import mcp
 
 router = APIRouter()
 
@@ -19,7 +19,7 @@ async def listen(audio: UploadFile = File(...)):
   try:
     text = transcribe(tmp_path)
     print(f"User said: {text}")
-    response = ask(text)
+    response = mcp.ask(text)
   finally:
     os.remove(tmp_path)
 
