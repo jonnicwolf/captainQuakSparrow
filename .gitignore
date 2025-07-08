@@ -1,1 +1,1 @@
-app/llm/*.gguf
+app/llm/models/*.gguf
